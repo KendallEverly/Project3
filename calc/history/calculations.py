@@ -1,11 +1,22 @@
 """Calculation history Class"""
+# from pandas import read_csv, write_csv, to_csv
+# from __future__ import Division
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
+# from calc.calculations.division import Division
 class Calculations:
     """Calculations class manages the history of calculations"""
     history = []
-    # pylint: disable=too-few-public-methods
+    # @staticmethod
+    # def readHistoryFromCSV():
+    #     df = pd.read_csv('"C:\\Users\\kenda\\PycharmProjects\\Validationhw\\validationnhw\\csv\\calcresults.csv"')
+    #     return Calculations.readHistoryFromCSV(df)
+    # @staticmethod
+    # def writeHistoryToCSV():
+    #     df = pd.write_csv('"C:\\Users\\kenda\\PycharmProjects\\Validationhw\\validationnhw\\csv\\calcresults.csv"')
+    #     df.to_csv('calcresults.csv', index=None)
+    #     return Calculations.writeHistoryToCSV()
     @staticmethod
     def clear_history():
         """clear the history of calculations"""
@@ -51,4 +62,9 @@ class Calculations:
     def add_multiplication_calculation_to_history(values):
         """Add a multiplication object to history using factory method create"""
         Calculations.add_calculation(Multiplication.create(values))
+        return True
+    @staticmethod
+    def add_division_calculation_to_history(values):
+        """Add a division object to history using factory method create"""
+        Calculations.add_calculation(Division.create(values))
         return True

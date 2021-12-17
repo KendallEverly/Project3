@@ -1,5 +1,6 @@
 """ This is the increment function"""
 from calc.history.calculations import Calculations
+# import pandas as pd
 
 #the calculator class just contains the methods to calculate
 class Calculator:
@@ -31,3 +32,18 @@ class Calculator:
         """ division number from result"""
         Calculations.add_division_calculation_to_history(tuple_values)
         return True
+    @staticmethod
+    def getHistory():
+        """get the history"""
+        return Calculations.history
+    @staticmethod
+    def getHistoryFromCSV():
+        """get the history"""
+        df = pd.read_csv('"C:\\Users\\kenda\\PycharmProjects\\Validationhw\\validationnhw\\csv\\calcresults.csv"')
+        return Calculations.readHistoryFromCSV(df)
+    @staticmethod
+    def writeHistoryToCSV():
+        """write the history"""
+        df = pd.write_csv('"C:\\Users\\kenda\\PycharmProjects\\Validationhw\\validationnhw\\csv\\calcresults.csv"')
+        df.to_csv('calcresults.csv', index=None)
+        return Calculations.writeHistoryToCSV()

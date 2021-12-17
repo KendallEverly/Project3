@@ -8,14 +8,14 @@ def clear_history_fixture():
     Calculations.clear_history()
 def test_calculator_add_static(clear_history_fixture):
     """testing the add"""
-    my_tuple = (1.0,2.0,5.0)
+    my_tuple = (1.0,2.0)
     Calculator.add_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 8.0
+    assert Calculator.get_last_result_value() == 3.0
 def test_calculator_subtract_static(clear_history_fixture):
     """Testing the subtract method of the calc"""
-    my_tuple = (1.0,2.0,3.0)
+    my_tuple = (1.0,2.0)
     Calculator.subtract_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == -6.0
+    assert Calculator.get_last_result_value() == -1
 def test_calculator_multiply_static(clear_history_fixture):
     """Testing the multiply method of the calc"""
     my_tuple = (1.0,2.0,3.0)
