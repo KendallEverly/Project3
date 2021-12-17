@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336677;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="title">
+    <h1>SOLID Object Oriented Design</h1>
+</div>
+<div class="box">
+    <div class="wrappingimage">
+        <p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;" src="https://live.staticflickr.com/8177/8002557010_afbaf24e1f_b.jpg" alt="Let's talk Object-oriented design and TDD"><a href="https://www.flickr.com/photos/63189426@N05/8002557010">"Let's talk Object-oriented design and TDD"</a><span> by <a href="https://www.flickr.com/photos/63189426@N05">IMAZU Asami</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=47d3d125-a48a-483f-ac62-7359a64fd86f" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+    </div>
+    <p>
+        S stands for the single-responsibility principle. This means exactly that—that the class has only one responsibility. In our calculator, we show this principle by having separate classes for each of the mathematical operations.
+    </p>
+    <p>
+        EX:
+    </p>
+    <p>
+        """module division"""
+    </p>
+    <p>
+        from calc.calculations.calculation import Calculation
+    </p>
+    <p>
+        class Division(Calculation):
+    </p>
+    <p>
+        """division"""
+    </p>
+    <p>
+        def getresult(self):
+    </p>
+    <p>
+        """get result division"""
+    </p>
+    <p>
+        return self.value_a / self.value_b
+
+    </p>
+    <p>
+        O stands for the open-closed principle. This means that modification to the existing code cannot happen. This helps to prevent more bugs. However, bugs can be fixed in the already existing code. This is similar to the extension in calculation to add_calculation in our calculator. Instead of modifying existing code, we created a different object.
+    </p>
+    <p>
+        L stands for the Liskov Substitution Principle. This is when subclass of two classes is interchangeable between the superclass without consequences. Since our calculator does not have such similar classes, our code does not illustrate this principle.
+    </p>
+    <p>
+        I stands for the Interface Segregation Principle. This means that larger chunks of code are broken down into smaller more specific pieces of code. Since our calculator only demonstrates basic mathematical functions, it is already broken down into specific pieces of code. Therefore, this principle is not demonstrated in our code.
+    </p>
+    <p>
+        D stands for the Dependency Inversion Principle. This simply states that the higher modules do not depend on the lower modules. But that the lower modules depend on the higher ones. The calculator itself represents the higher modules, and the operations represent the lower modules.
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+{% endblock %}

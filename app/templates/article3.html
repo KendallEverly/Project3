@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336677;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="title">
+    <h1>Object Oriented Programming</h1>
+</div>
+<div class="box">
+    <p>
+        Abstraction is the concept of knowing how to use something, without knowing how it actually works. Like the calculator program that we created, the calculator runs and solves simple mathematical problems with a simple click of a button. However, how it works is not clear to someone simply looking at the GUI.
+    </p>
+    <p>
+        Encapsulation is when code is shortened by reducing redundant code through a class. This allows the class to be called without having to continuously repeat the code whenever you want an action to perform. For example: the class Calculation was called multiple times for each of the mathematical functions.
+    </p>
+    <div class="wrappingimage">
+        <p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/OOP.svg" alt="File:OOP.svg"><a href="https://commons.wikimedia.org/w/index.php?curid=69213594">"File:OOP.svg"</a><span> by <a href="https://commons.wikimedia.org/wiki/User:Dave_Braunschweig">Dave Braunschweig</a></span> is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en?ref=ccsearch&atype=html" style="margin-right: 5px;">CC0 1.0</a><a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=abc83130-f68f-42da-85ca-85cc69c02003" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-cc0_icon.svg" /></a></p>
+    </div>
+    <p>
+        Inheritance allows the information to be in a specific hierarchy from superclass to subclass. This can be seen in our calculator when Calculation becomes Calculations in a different subclass. Again, the subclass inherits from the superclass.
+    </p>
+    <p>
+        """Calculation history Class"""
+    </p>
+    <p>
+        class Calculations:
+    </p>
+    <p>
+        history = []
+    </p>
+    <p>
+        # pylint: disable=too-few-public-methods
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def clear_history():
+    </p>
+    <p>
+        Calculations.history.clear()
+    </p>
+    <p>
+        return True
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def count_history():
+    </p>
+    <p>
+        return len(Calculations.history)
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def get_last_calculation():
+    </p>
+    <p>
+        return Calculations.history[-1]
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def get_first_calculation():
+    </p>
+    <p>
+        return Calculations.history[-1]
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def get_calculation(num):
+    </p>
+    <p>
+        """ get a specific calculation from history"""
+    </p>
+    <p>
+        return Calculations.history[num]
+    </p>
+    <p>
+        @staticmethod
+    </p>
+    <p>
+        def add_calculation(calculation):
+    </p>
+    <p>
+        """ get a specific calculation from history"""
+    </p>
+    <p>
+        return Calculations.history.append(calculation)
+    </p>
+    <p>
+        Polymorphism is when a class has multiple methods that are the same, but with different parameters. This is similar to how in the Calculator class you have different static methods, but that the class itself is the same.
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+{% endblock %}

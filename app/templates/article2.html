@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336677;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="title">
+    <h1>AAA Testing</h1>
+</div>
+<div class="box">
+    <p>
+        When testing with Python, it is important to demonstrate the AAA pattern. AAA stands for Arrange-Act-Assert. The “Arrange” part of the test is where the objects are being set up to be tested. The “Act” part is the actual testing. The “Assert” part is where the outcome is included, such as a return value.
+    </p>
+    <div class="wrappingimage">
+        <p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;" src="https://live.staticflickr.com/4063/4369776892_5cd42d27ba.jpg" alt="coding"><a href="https://www.flickr.com/photos/44124363951@N01/4369776892">"coding"</a><span> by <a href="https://www.flickr.com/photos/44124363951@N01">marissa</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=6a634461-0bfd-40e3-84f6-c06a42091950" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /></a></p>
+    </div>
+    <p>
+        In the “Arrange” section, it shows the setup, data, created objects, and other similar arrangements. In the “Act” section, is shows the method being tested. In the “Assert” section, it verifies the test.
+    </p>
+    <p>
+        """module calc"""
+    </p>
+    <p>
+        from calc.calculations.calculation import Calculation
+    </p>
+    <p>
+        class Addition(Calculation):
+    </p>
+    <p>
+        """addition"""
+    </p>
+    <p>
+        def getresult(self):
+    </p>
+    <p>
+        """get result addition"""
+    </p>
+    <p>
+        return self.value_a + self.value_b
+    </p>
+    <p>
+        The class would be the arrangement; the getresult is the act; and the return is the assert.
+    </p>
+    <p>
+        This type of testing pattern is fast and easy to understand. This means that it is best to not test a unit that branches. In fact, commenting which part of the test is the “Arrange”, “Act”, and “Assert” helps to differentiate each of the sections to make it easier to understand.
+    </p>
+</div>
+{% endblock %}
